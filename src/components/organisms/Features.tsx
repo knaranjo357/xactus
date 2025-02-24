@@ -53,7 +53,7 @@ export const Features = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F7F7F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -62,10 +62,10 @@ export const Features = () => {
           variants={containerVariants}
           className="text-center mb-16"
         >
-          <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-4">
+          <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-4 text-[#001011]">
             Soluciones de Alto Impacto
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <motion.p variants={itemVariants} className="text-xl text-[#7E7E7E] max-w-3xl mx-auto">
             Tecnología de punta que impulsa su negocio hacia el futuro
           </motion.p>
         </motion.div>
@@ -82,13 +82,13 @@ export const Features = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#DEDEDE]"
             >
-              <div className="text-[#409ACA] mb-4">
+              <div className="text-[#0E72A7] mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-[#001011]">{feature.title}</h3>
+              <p className="text-[#7E7E7E]">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -98,23 +98,23 @@ export const Features = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="mt-16 bg-white p-8 rounded-2xl shadow-lg"
+          className="mt-16 bg-gradient-to-br from-[#0E72A7] to-[#4D8ACA] p-8 rounded-2xl shadow-lg text-white"
         >
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div variants={itemVariants} className="text-center">
-              <CircleWavyCheck weight="duotone" className="w-12 h-12 text-[#409ACA] mx-auto mb-4" />
+              <CircleWavyCheck weight="duotone" className="w-12 h-12 text-[#4FBA78] mx-auto mb-4" />
               <h4 className="text-lg font-semibold mb-2">Calidad Garantizada</h4>
-              <p className="text-gray-600">Certificaciones internacionales</p>
+              <p className="text-[#DEDEDE]">Certificaciones internacionales</p>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center">
-              <Lightning weight="duotone" className="w-12 h-12 text-[#409ACA] mx-auto mb-4" />
+              <Lightning weight="duotone" className="w-12 h-12 text-[#ED6A5A] mx-auto mb-4" />
               <h4 className="text-lg font-semibold mb-2">Alta Eficiencia</h4>
-              <p className="text-gray-600">Optimización continua</p>
+              <p className="text-[#DEDEDE]">Optimización continua</p>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center">
-              <Rocket weight="duotone" className="w-12 h-12 text-[#409ACA] mx-auto mb-4" />
+              <Rocket weight="duotone" className="w-12 h-12 text-[#4FBA78] mx-auto mb-4" />
               <h4 className="text-lg font-semibold mb-2">Innovación Constante</h4>
-              <p className="text-gray-600">Tecnología de vanguardia</p>
+              <p className="text-[#DEDEDE]">Tecnología de vanguardia</p>
             </motion.div>
           </div>
         </motion.div>

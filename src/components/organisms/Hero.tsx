@@ -13,106 +13,147 @@ export const Hero: React.FC = () => {
     { icon: <Rocket weight="duotone" />, value: "24/7", label: "Soporte Técnico" },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const lineVariants = {
+    hidden: { pathLength: 0, opacity: 0 },
     visible: {
+      pathLength: 1,
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const buttonVariants = {
-    rest: { scale: 1 },
-    hover: { scale: 1.05 },
-    tap: { scale: 0.95 },
-  };
-
-  const parallaxVariants = {
-    initial: { y: 0 },
-    scroll: {
-      y: -50,
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 20,
-        ease: "linear",
-      },
-    },
+        pathLength: { duration: 2, ease: "easeInOut" },
+        opacity: { duration: 0.5 }
+      }
+    }
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* Background Pattern */}
-      <motion.div
-        className="absolute inset-0 -z-10 opacity-10"
-        initial="initial"
-        animate="scroll"
-        variants={parallaxVariants}
-      >
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-          backgroundSize: '60px 60px',
-        }} />
-      </motion.div>
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0E72A7] to-[#4D8ACA]">
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <motion.path
+            d="M0,50 L100,50"
+            stroke="#DEDEDE"
+            strokeWidth="0.2"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+          <motion.path
+            d="M50,0 L50,100"
+            stroke="#DEDEDE"
+            strokeWidth="0.2"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+          <motion.path
+            d="M0,0 L100,100"
+            stroke="#DEDEDE"
+            strokeWidth="0.2"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+          <motion.path
+            d="M100,0 L0,100"
+            stroke="#DEDEDE"
+            strokeWidth="0.2"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </svg>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      {/* Animated X Logo */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5">
+        <motion.svg
+          className="w-[800px] h-[800px]"
+          viewBox="0 0 100 100"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <motion.path
+            d="M20,20 L80,80"
+            stroke="#4D8ACA"
+            strokeWidth="1"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+          <motion.path
+            d="M80,20 L20,80"
+            stroke="#4D8ACA"
+            strokeWidth="1"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </motion.svg>
+      </div>
+
+      {/* Accent Shapes */}
+      <div className="absolute top-0 right-0 w-64 h-64 transform translate-x-32 -translate-y-32">
+        <motion.div
+          className="w-full h-full bg-[#ED6A5A] rounded-full opacity-20 blur-3xl"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5 }}
+        />
+      </div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 transform -translate-x-48 translate-y-48">
+        <motion.div
+          className="w-full h-full bg-[#4FBA78] rounded-full opacity-10 blur-3xl"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.2 }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 relative z-10">
         <motion.div
           className="text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           {/* Main Heading */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#409ACA] to-blue-600">
-              Transformación Digital
+          <motion.div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#DEDEDE]">
+                Transformación Digital
+              </span>
               <br />
-              <span className="text-gray-900">que Genera Resultados</span>
+              <span className="text-[#F7F7F7]">que Genera Resultados</span>
             </h1>
           </motion.div>
 
           {/* Subheading */}
           <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-[#DEDEDE] mb-12 max-w-3xl mx-auto"
           >
             Impulsamos la innovación tecnológica en América Latina y Estados Unidos
             con soluciones IoT, IA y automatización de última generación.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-16">
+          <motion.div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <motion.button
-              variants={buttonVariants}
-              initial="rest"
-              whileHover="hover"
-              whileTap="tap"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/contact')}
-              className="flex items-center px-8 py-4 bg-[#409ACA] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
+              className="flex items-center justify-center px-8 py-4 bg-[#ED6A5A] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all hover:bg-[#ff7a68]"
             >
               Comencemos
               <ArrowRight weight="bold" className="ml-2 w-5 h-5" />
             </motion.button>
             
             <motion.button
-              variants={buttonVariants}
-              initial="rest"
-              whileHover="hover"
-              whileTap="tap"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/services')}
-              className="flex items-center px-8 py-4 bg-white text-[#409ACA] rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow border-2 border-[#409ACA]"
+              className="flex items-center justify-center px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-white hover:bg-white/10 transition-colors"
             >
               Servicios
               <ArrowRight weight="bold" className="ml-2 w-5 h-5" />
@@ -121,21 +162,26 @@ export const Hero: React.FC = () => {
 
           {/* Stats */}
           <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                className="p-6 bg-[#4D8ACA]/20 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-[#4D8ACA]/30 transition-all duration-300"
                 whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300,
+                  delay: index * 0.1 
+                }}
               >
-                <div className="text-[#409ACA] mb-3 w-8 h-8 mx-auto">
+                <div className="text-[#4FBA78] mb-3 w-8 h-8 mx-auto">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                <div className="text-gray-600 text-sm">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-[#DEDEDE] text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

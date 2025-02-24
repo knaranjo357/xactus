@@ -1,11 +1,7 @@
-import { Brain, Cpu, Cog, LineChart, HardDrive, Lightbulb, CheckCircle2, Timer, Building2, Activity, Workflow, Bot, Camera, CloudCog, Cuboid as Cube, FlaskRound as Flask, Microscope, Printer } from 'lucide-react';
+import { Brain, Cpu, Cog, LineChart, HardDrive, Lightbulb, CheckCircle2, Timer, Building2, Activity, Bot, Camera, CloudCog, Cuboid as Cube, FlaskRound as Flask, Microscope, Shield } from 'lucide-react';
 
 export interface ServiceFeature {
   icon: typeof CheckCircle2;
-  text: string;
-}
-
-export interface ServiceExample {
   text: string;
 }
 
@@ -15,7 +11,6 @@ export interface Service {
   subtitle: string;
   description: string;
   features?: ServiceFeature[];
-  examples?: ServiceExample[];
   benefits?: string[];
 }
 
@@ -23,89 +18,97 @@ export const ServicesData: Service[] = [
   {
     icon: Cog,
     title: 'Automatización Inteligente de Procesos',
-    subtitle: '¿Procesos lentos que drenan su productividad?',
-    description: 'Nosotros los convertimos en ventajas competitivas.',
+    subtitle: 'Transforme sus operaciones con IA',
+    description: 'Soluciones de automatización avanzada que optimizan sus procesos y maximizan la eficiencia operativa.',
     features: [
-      { icon: CheckCircle2, text: 'Software a medida: Sistemas que se adaptan a sus flujos, no al revés' },
-      { icon: Timer, text: 'ROI en 90 días: Reducción de costos operativos hasta en un 40%' },
-      { icon: Workflow, text: 'Automatización end-to-end: Desde facturación hasta logística' }
+      { icon: CheckCircle2, text: 'Sistemas inteligentes adaptados a sus flujos de trabajo' },
+      { icon: Timer, text: 'Monitoreo en tiempo real con alertas predictivas' },
+      { icon: Activity, text: 'Optimización continua basada en datos' }
     ],
-    examples: [
-      { text: 'Optimización de cadenas de suministro para multinacionales' },
-      { text: 'Integración de ERP + IA para toma de decisiones en tiempo real' }
+    benefits: [
+      'Reducción significativa de errores operativos',
+      'Mejora en la toma de decisiones',
+      'Escalabilidad y adaptabilidad garantizada'
     ]
   },
   {
     icon: Cpu,
     title: 'IoT & Smart Cities',
-    subtitle: 'Ciudades del futuro, hoy',
-    description: 'Diseñamos e implementamos infraestructura tecnológica de última generación.',
+    subtitle: 'Infraestructura Inteligente del Futuro',
+    description: 'Soluciones IoT de última generación para ciudades y entornos industriales inteligentes.',
     features: [
-      { icon: Activity, text: 'Monitoreo ambiental: Calidad del aire, agua y ruido' },
-      { icon: Camera, text: 'Movilidad inteligente: Cámaras de conteo vehicular + algoritmos predictivos' },
-      { icon: Building2, text: 'Gobernanza 4.0: Postes inteligentes con sensores y conectividad 5G' }
+      { icon: Activity, text: 'Monitoreo ambiental avanzado: aire, agua y ruido' },
+      { icon: Camera, text: 'Sistemas de vigilancia inteligente con IA' },
+      { icon: Shield, text: 'Seguridad y encriptación de nivel militar' }
     ],
     benefits: [
-      'Fabricación propia de hardware (control total de calidad)',
-      'Integración con modelos de IA para pronósticos con un 95% de exactitud'
+      'Hardware propio con garantía extendida',
+      'Integración perfecta con sistemas existentes',
+      'Análisis predictivo con 95% de precisión'
     ]
   },
   {
     icon: Brain,
-    title: 'Desarrollo de IA & Visión Artificial',
-    subtitle: 'No basta con recolectar datos: hay que convertirlos en acciones',
-    description: 'Transformamos datos en decisiones inteligentes con tecnología de punta.',
+    title: 'Inteligencia Artificial & Análisis Avanzado',
+    subtitle: 'Potencia tus datos con IA',
+    description: 'Soluciones de IA que transforman datos en decisiones estratégicas y ventajas competitivas.',
     features: [
-      { icon: LineChart, text: 'Modelos predictivos para variables ambientales y logística' },
-      { icon: Camera, text: 'Visión artificial para detección de fallas y seguridad' },
-      { icon: Bot, text: 'Agentes conversacionales con NLP para servicio 24/7' }
+      { icon: LineChart, text: 'Modelos predictivos de alta precisión' },
+      { icon: Camera, text: 'Detección de fraude mediante visión artificial' },
+      { icon: Bot, text: 'Asistentes virtuales empresariales 24/7' }
+    ],
+    benefits: [
+      'Detección temprana de anomalías',
+      'Automatización de procesos complejos',
+      'Mejora continua mediante aprendizaje automático'
     ]
   },
   {
     icon: HardDrive,
-    title: 'Hardware de Alta Ingeniería',
-    subtitle: 'Tecnología que resiste el mundo real',
-    description: 'Dispositivos robustos diseñados para condiciones extremas.',
+    title: 'Hardware Industrial Especializado',
+    subtitle: 'Tecnología Robusta para Entornos Exigentes',
+    description: 'Dispositivos de grado industrial diseñados para operar en las condiciones más demandantes.',
     features: [
-      { icon: CheckCircle2, text: 'Dataloggers industriales certificados IP68' },
-      { icon: CloudCog, text: 'Estaciones meteorológicas completas' },
-      { icon: Lightbulb, text: 'Soluciones a medida para necesidades específicas' }
+      { icon: Shield, text: 'Diseño robusto con protección IP68' },
+      { icon: CloudCog, text: 'Conectividad multi-protocolo avanzada' },
+      { icon: Lightbulb, text: 'Sistemas modulares personalizables' }
     ],
     benefits: [
-      '3 años de soporte técnico',
-      'Actualizaciones remotas incluidas',
-      'Operativos en rangos de -20°C a 60°C'
+      'Soporte técnico especializado',
+      'Actualizaciones remotas OTA',
+      'Garantía extendida disponible'
     ]
   },
   {
     icon: Cube,
-    title: 'Diseño y Desarrollo 3D',
-    subtitle: 'De la imaginación a la realidad',
-    description: 'Servicios completos de diseño, modelado e impresión 3D profesional.',
+    title: 'Diseño y Prototipado Industrial',
+    subtitle: 'De la Idea al Producto Final',
+    description: 'Servicios completos de diseño y desarrollo de productos industriales.',
     features: [
-      { icon: CheckCircle2, text: 'Modelado 3D de alta precisión' },
-      { icon: Printer, text: 'Impresión en resina y FDM' },
-      { icon: Microscope, text: 'Control de calidad y post-procesado' }
+      { icon: CheckCircle2, text: 'Diseño industrial optimizado' },
+      { icon: Microscope, text: 'Pruebas de calidad exhaustivas' },
+      { icon: Shield, text: 'Protección de propiedad intelectual' }
     ],
     benefits: [
-      'Prototipos funcionales',
-      'Piezas finales de producción',
-      'Acabados profesionales'
+      'Optimización para fabricación',
+      'Validación en condiciones reales',
+      'Documentación técnica completa'
     ]
   },
   {
     icon: Flask,
-    title: 'Investigación y Desarrollo',
-    subtitle: 'Innovación basada en evidencia',
-    description: 'Investigación de mercado y desarrollo de productos con metodologías ágiles.',
+    title: 'I+D+i Industrial',
+    subtitle: 'Innovación Basada en Evidencia',
+    description: 'Investigación y desarrollo de soluciones tecnológicas avanzadas para la industria 4.0.',
     features: [
-      { icon: CheckCircle2, text: 'Estudios de mercado profundos' },
-      { icon: Timer, text: 'Pruebas de calidad exhaustivas' },
-      { icon: Workflow, text: 'Desarrollo iterativo con feedback continuo' }
+      { icon: CheckCircle2, text: 'Investigación aplicada en IA e IoT' },
+      { icon: Timer, text: 'Desarrollo ágil con ciclos cortos' },
+      { icon: Shield, text: 'Validación y certificación industrial' }
     ],
-    examples: [
-      { text: 'Validación de productos con usuarios reales' },
-      { text: 'Optimización de procesos basada en datos' }
+    benefits: [
+      'Soluciones patentables',
+      'Transferencia tecnológica completa',
+      'Escalabilidad garantizada'
     ]
   }
 ];

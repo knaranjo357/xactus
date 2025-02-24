@@ -15,7 +15,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
     subtitle,
     description,
     features,
-    examples,
     benefits
   } = service;
 
@@ -32,19 +31,19 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 
   return (
     <motion.div 
-      className="p-8 bg-white rounded-xl shadow-lg transition-shadow duration-300"
+      className="p-8 bg-white rounded-xl shadow-lg transition-shadow duration-300 border border-[#DEDEDE]"
       whileHover="hover"
       variants={cardVariants}
     >
       <div className="flex items-center gap-4 mb-6">
         <ServiceIcon Icon={Icon} />
         <div>
-          <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-          <p className="text-lg font-medium text-[#409ACA]">{subtitle}</p>
+          <h3 className="text-2xl font-bold text-[#001011]">{title}</h3>
+          <p className="text-lg font-medium text-[#0E72A7]">{subtitle}</p>
         </div>
       </div>
       
-      <p className="text-gray-600 mb-8 leading-relaxed">{description}</p>
+      <p className="text-[#7E7E7E] mb-8 leading-relaxed">{description}</p>
 
       {features && features.length > 0 && (
         <div className="space-y-4 mb-8">
@@ -55,45 +54,29 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
               variants={featureVariants}
               whileHover="hover"
             >
-              <CheckCircle2 className="w-5 h-5 text-[#409ACA] mt-1 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <p className="text-gray-700">{feature.text}</p>
+              <CheckCircle2 className="w-5 h-5 text-[#4FBA78] mt-1 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <p className="text-[#7E7E7E]">{feature.text}</p>
             </motion.div>
           ))}
         </div>
       )}
 
-      {examples && examples.length > 0 && (
-        <div className="border-t border-gray-100 pt-6 mb-8">
-          <p className="font-medium text-gray-900 mb-4">Casos de Éxito:</p>
-          <ul className="space-y-3">
-            {examples.map((example, index) => (
-              <motion.li 
-                key={index} 
-                className="flex items-center text-gray-700 group"
-                whileHover={{ x: 10 }}
-              >
-                <span className="text-[#409ACA] mr-2 group-hover:scale-110 transition-transform">✔️</span>
-                {example.text}
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       {benefits && benefits.length > 0 && (
         <motion.div 
-          className="bg-gradient-to-br from-blue-50 to-gray-50 p-6 rounded-lg"
+          className="bg-gradient-to-br from-[#F7F7F7] to-white p-6 rounded-lg border border-[#DEDEDE]"
           whileHover={{ scale: 1.02 }}
         >
-          <p className="font-medium text-gray-900 mb-4">Beneficios:</p>
+          <p className="font-medium text-[#001011] mb-4">Beneficios:</p>
           <ul className="space-y-3">
             {benefits.map((benefit, index) => (
               <motion.li 
                 key={index} 
-                className="flex items-center text-gray-700 group"
+                className="flex items-center text-[#7E7E7E] group"
                 whileHover={{ x: 10 }}
               >
-                <span className="text-[#409ACA] mr-2 group-hover:scale-110 transition-transform">✅</span>
+                <span className="text-[#4FBA78] mr-2 group-hover:scale-110 transition-transform">
+                  <CheckCircle2 className="w-5 h-5" />
+                </span>
                 {benefit}
               </motion.li>
             ))}

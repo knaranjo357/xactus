@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "sectors": "Sectors",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "sectors": {
+    "manufacturing": {
+      "title": "Manufacturing",
+      "subtitle": "Industry 4.0 and Smart Automation",
+      "description": "Manufacturing and Industry 4.0 are converging in an unprecedented transformation, driven by the need for greater efficiency, flexibility, and competitiveness.",
+      "overview": "Overview",
+      "keyFeatures": "Key Features",
+      "benefits": "Benefits",
+      "solutions": "Our Solutions",
+      "readyToTransform": "Ready to Transform?",
+      "contactUs": "Contact Us",
+      "learnMore": "Learn more",
+      "transformationDesc": "Let's discuss how we can help your organization thrive in the digital age."
+    },
+    "energy": {
+      "title": "Energy",
+      "subtitle": "Efficient and Sustainable Management",
+      "description": "Digital transformation is redefining energy efficiency. We drive sustainability with IoT, AI, and automation solutions."
+    },
+    "telecommunications": {
+      "title": "Telecommunications",
+      "subtitle": "5G Networks and Advanced Connectivity",
+      "description": "5G networks are revolutionizing connectivity. We drive this transformation with automation, AI, and advanced network management solutions."
+    },
+    "public": {
+      "title": "Public Sector",
+      "subtitle": "Government Modernization and Efficiency",
+      "description": "Digital transformation of the public sector is key to more efficient, transparent, and citizen-oriented administration."
+    },
+    "finance": {
+      "title": "Finance",
+      "subtitle": "Digital Financial Innovation",
+      "description": "Financial automation and banking digitization are essential for the future of the sector. We implement Fintech, AI, and cybersecurity solutions."
+    },
+    "retail": {
+      "title": "Retail",
+      "subtitle": "Smart and Personalized Commerce",
+      "description": "Automation and data analytics are revolutionizing inventory management in retail. We implement AI and predictive analytics to optimize operations."
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "designed": "Designed and developed by Xactus.io"
+  }
+}

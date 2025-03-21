@@ -3,22 +3,23 @@ import { motion } from 'framer-motion';
 import { 
   EnvelopeSimple, 
   Phone, 
-  WhatsappLogo 
+  WhatsappLogo,
+  MapPin
 } from '@phosphor-icons/react';
 
 export const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone weight="duotone" className="w-6 h-6" />,
-      text: "+57 300 4855633",
-      link: "tel:+573004855633",
+      text: "+57 310 761 8987",
+      link: "tel:+573107618987",
       color: "text-[#0E72A7]",
       label: "Línea directa"
     },
     {
       icon: <WhatsappLogo weight="duotone" className="w-6 h-6" />,
       text: "WhatsApp",
-      link: "https://wa.me/573004855633",
+      link: "https://wa.me/573107618987",
       color: "text-[#0E72A7]",
       label: "Chat instantáneo"
     },
@@ -28,13 +29,19 @@ export const Contact: React.FC = () => {
       link: "mailto:info@xactus.io",
       color: "text-[#0E72A7]",
       label: "Correo"
+    },
+    {
+      icon: <MapPin weight="duotone" className="w-6 h-6" />,
+      text: "Calle 34ª # 36ª – 27, Bucaramanga, Colombia",
+      link: "https://maps.google.com/?q=Calle+34ª+%23+36ª+–+27,+Bucaramanga,+Colombia",
+      color: "text-[#0E72A7]",
+      label: "Dirección"
     }
   ];
 
   return (
     <section className="py-12 bg-white" id="contact">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        {/* Información de Contacto */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +51,7 @@ export const Contact: React.FC = () => {
           <h2 className="text-2xl font-bold mb-2">Contáctenos</h2>
           <p className="text-gray-600 mb-8">Estamos aquí para ayudarle en su transformación digital</p>
           
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {contactInfo.map((info, index) => (
               <motion.a
                 key={index}
@@ -68,7 +75,7 @@ export const Contact: React.FC = () => {
               Respuesta garantizada en menos de 24 horas
             </p>
             <a
-              href="https://wa.me/573004855633"
+              href="https://wa.me/573107618987"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-[#0E72A7] text-white rounded-lg font-medium hover:bg-[#0E72A7]/90 transition-colors"

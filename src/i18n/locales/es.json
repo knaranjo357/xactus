@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "sectors": "Sectores",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "sectors": {
+    "manufacturing": {
+      "title": "Manufactura",
+      "subtitle": "Industria 4.0 y Automatización Inteligente",
+      "description": "La manufactura e Industria 4.0 están convergiendo en una transformación sin precedentes, impulsada por la necesidad de mayor eficiencia, flexibilidad y competitividad.",
+      "overview": "Descripción General",
+      "keyFeatures": "Características Principales",
+      "benefits": "Beneficios",
+      "solutions": "Nuestras Soluciones",
+      "readyToTransform": "¿Listo para Transformar?",
+      "contactUs": "Contáctenos",
+      "learnMore": "Más información",
+      "transformationDesc": "Hablemos sobre cómo podemos ayudar a su organización a prosperar en la era digital."
+    },
+    "energy": {
+      "title": "Energía",
+      "subtitle": "Gestión Eficiente y Sostenible",
+      "description": "La transformación digital está redefiniendo la eficiencia energética. Impulsamos la sostenibilidad con soluciones basadas en IoT, IA y automatización."
+    },
+    "telecommunications": {
+      "title": "Telecomunicaciones",
+      "subtitle": "Redes 5G y Conectividad Avanzada",
+      "description": "Las redes 5G están revolucionando la conectividad. Impulsamos esta transformación con soluciones de automatización, IA y gestión avanzada de redes."
+    },
+    "public": {
+      "title": "Sector Público",
+      "subtitle": "Modernización y Eficiencia Gubernamental",
+      "description": "La transformación digital del sector público es clave para una administración más eficiente, transparente y orientada al ciudadano."
+    },
+    "finance": {
+      "title": "Finanzas",
+      "subtitle": "Innovación Financiera Digital",
+      "description": "La automatización financiera y la digitalización bancaria son esenciales para el futuro del sector. Implementamos soluciones de Fintech, IA y ciberseguridad."
+    },
+    "retail": {
+      "title": "Retail",
+      "subtitle": "Comercio Inteligente y Personalizado",
+      "description": "La automatización y el análisis de datos están revolucionando la gestión de inventarios en retail. Implementamos IA y analítica predictiva para optimizar operaciones."
+    }
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "designed": "Diseñado y desarrollado por Xactus.io"
+  }
+}

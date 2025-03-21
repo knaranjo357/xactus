@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Navigation } from './organisms/Navigation';
+import { Footer } from './organisms/Footer';
 import { HomePage } from './pages/HomePage';
-import { ServicesPage } from './pages/ServicesPage';
 import { ProductsPage } from './pages/ProductsPage';
-import { TeamPage } from './pages/TeamPage';
+import { SectorsPage } from './pages/SectorsPage';
+import { SectorDetailPage } from './pages/SectorDetailPage';
+import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
 export const AppContent: React.FC = () => {
@@ -20,7 +22,7 @@ export const AppContent: React.FC = () => {
   }, []);
 
   const getActiveSection = () => {
-    const path = location.pathname.slice(1);
+    const path = location.pathname.slice(1).split('/')[0];
     return path || 'home';
   };
 
@@ -29,24 +31,27 @@ export const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navigation
         activeSection={getActiveSection()}
         setActiveSection={handleSectionChange}
         isMobile={isMobile}
       />
       
-      <main className={`pt-16 ${isMobile ? 'pb-20' : 'pb-0'}`}>
+      <main className={`flex-grow pt-16 ${isMobile ? 'pb-20' : 'pb-0'}`}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
             <Route path="/products" element={<ProductsPage />} />
-            <Route path="/team" element={<TeamPage />} />
+            <Route path="/sectors" element={<SectorsPage />} />
+            <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </AnimatePresence>
       </main>
+
+      <Footer />
     </div>
   );
 };

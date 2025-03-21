@@ -1,9 +1,9 @@
 import React from 'react';
 import { 
   House as HomeIcon,
-  Briefcase, 
   Package, 
-  Users, 
+  Buildings,
+  Users,
   Phone as PhoneCall
 } from '@phosphor-icons/react';
 
@@ -14,19 +14,19 @@ export const NavigationItems = [
     id: 'home' 
   },
   { 
-    name: 'Servicios', 
-    icon: <Briefcase weight="duotone" className="w-6 h-6" />, 
-    id: 'services' 
-  },
-  { 
     name: 'Productos', 
     icon: <Package weight="duotone" className="w-6 h-6" />, 
     id: 'products' 
   },
   { 
-    name: 'Equipo', 
+    name: 'Sectores', 
+    icon: <Buildings weight="duotone" className="w-6 h-6" />, 
+    id: 'sectors' 
+  },
+  { 
+    name: 'Nosotros', 
     icon: <Users weight="duotone" className="w-6 h-6" />, 
-    id: 'team' 
+    id: 'about' 
   },
   { 
     name: 'Contacto', 
